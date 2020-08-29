@@ -1,0 +1,42 @@
+body{
+    background-color: #212121;
+    font-family: 'Open Sans', sans-serif;
+    color: #e8e8e8;
+}
+#MainNavbar {
+    font-size: 1.5rem;
+}
+
+#MainNavbar .nav-link{
+    color: #e8e8e8;
+}
+#MainNavbar .nav-link:hover{
+    color: #a03535;
+}
+#MainNavbar .navbar-brand{
+    color: #a03535;
+    font-size: 2rem;
+    
+}
+.h1{
+    color: #e8e8e8;
+}
+.navbar.scrolled{
+    background: #212121;
+    transition: background 500ms;
+}
+
+#headingImage{
+    width: 15%;
+    display: flex;
+    margin: auto;
+    margin-bottom: 5px;
+}
+@media(max-width:1200px){
+    #headingGroup .h1{
+        font-size: 3rem;
+    }
+}
+.Icon{
+    font-size: 3rem;
+}
