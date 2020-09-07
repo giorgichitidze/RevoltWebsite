@@ -97,3 +97,7 @@ body{
     padding-right: 1.1rem;
     }
     }
+
+    #videoCont{
+        width: 75%;
+    }
