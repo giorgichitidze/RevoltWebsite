@@ -61,3 +61,10 @@ body{
 #videoCont{
     width: 75%;
 }
+.list-unstyled>li>a{
+    color: #a03535;
+}
+#Footer{
+
+    background-color: rgb(15, 15, 15);
+}
