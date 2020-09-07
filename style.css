@@ -40,3 +40,17 @@ body{
 .Icon{
     font-size: 3rem;
 }
+#jumbo{
+    background-color: #212121;
+}
+#JumboH1{
+    background-color: #a03535;
+}
+#jumboBTN{
+    background-color: #212121;
+    border: 2px solid #a03535;
+    color: #e8e8e8;
+}
+#jumboBTN:hover{
+    background-color: #a03535;
+}
