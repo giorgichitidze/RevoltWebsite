@@ -26,6 +26,8 @@ body{
     transition: background 500ms;
 }
 
+html { scroll-behavior: smooth; } 
+
 #headingImage{
     width: 15%;
     display: flex;
