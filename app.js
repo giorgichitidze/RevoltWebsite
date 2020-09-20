@@ -13,6 +13,17 @@ mongoose.connect("mongodb://localhost:27017/Revolt_Images",{useNewUrlParser:true
     .then(()=> console.log("MongoDB Connected"))
     .catch(err=> console.log("This is error : " + err));
 
+
+mongoose.connect("mongodb://localhost:27017/Revolt_Admins",{useNewUrlParser:true})
+    .then(()=> console.log("admins DB created"))
+    .catch(err=>console.log("this is error: " + err));
+
+var RevoltAdminsSchema = new mongoose.Schema({
+
+    name:String,
+    email:String,
+    password:String
+});
 //Schema Setup
 var RevoltImagesSchema = new mongoose.Schema({
 
@@ -22,7 +33,20 @@ var RevoltImagesSchema = new mongoose.Schema({
 });
 
 var Images = mongoose.model("revoltimages",RevoltImagesSchema); 
+var Admins = mongoose.model("revoltadmins",RevoltAdminsSchema);
 
+// Admins.create({
+//     name:"Giorgi Chitidze",
+//     email:"chitidzegiorgi2@gmail.com",
+//     password:"Reventcolch1."
+// }, function(err,admins){
+//     if(err){
+//         console.log(err);
+//     }else{
+//         console.log("admin created successfuly");
+//         console.log(admins);
+//     }
+// })
 
 //  Images.create({
 
@@ -44,7 +68,15 @@ app.get("/",function(req,res){
     
     res.render("index");
 
-})
+});
+
+app.get("/admin",function(req,res){
+    res.render("admin");
+});
+
+app.get("/admin/panel",function(req,res){
+    res.send("this is admin panel page");
+});
 
 app.get("/FelledRoots",function(req,res){
 
@@ -64,7 +96,8 @@ app.get("/FelledRoots",function(req,res){
     
 });
 
-app.listen(4000, function(){
+
+app.listen(3000, function(){
     console.log("Revolt Server Started!!!");
 })
 
