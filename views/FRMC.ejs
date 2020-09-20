@@ -1,0 +1,40 @@
+<%- include("partials/head.ejs") %>
+
+
+   
+    <section id= "header" class="jumbotron my-5 py-10">
+        
+        <div class="container text-light">
+            
+            <br>
+            <br><br><br><br><br>
+            <br>
+        </div>
+    </section>
+<!-- Video -->
+
+   <div class="container-fluid text-center">
+    <video id = "videoCont" class="d-none d-lg-inline mb-5 vid " playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+        <source src="Images/FRMC.mp4" type="video/mp4">
+    </video>
+
+   </div>
+   
+
+    <section id="Gallery ">
+        <div class="container-fluid">
+            <div class="row">
+                <% RevoltImages.forEach(function(RevoltImage){%>
+                <div class="col-lg-4 mb-4">
+                    <img class = "img-fluid"src="<%= RevoltImage.image %>" alt="">
+                </div>
+                <%});%>
+            </div>
+        </div>
+
+
+        
+    </section>
+ 
+
+    <%- include("partials/footer.ejs") %>
