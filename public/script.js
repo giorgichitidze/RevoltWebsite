@@ -1,3 +1,4 @@
+console.log("script connected");
 $(function () {
     $(document).scroll(function () {
         var $nav = $("#MainNavbar");
