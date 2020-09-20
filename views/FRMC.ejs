@@ -25,9 +25,9 @@
         <div class="container-fluid">
             <div class="row">
                 <% RevoltImages.forEach(function(RevoltImage){%>
-                <div class="col-lg-4 mb-4">
+                <div class="text-center col-lg-4 mb-4">
                     <img id = "myImg"class = "img-fluid myImg"src="<%= RevoltImage.Image %>" alt="">
-                    
+                    <a href="/FelledRoots/<%= RevoltImage._id%>" id="jumboBTN" class="btn  btn-sm my-2" >View Image</a>
                 </div>
                 
                 <%});%>
