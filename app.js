@@ -9,7 +9,7 @@ app.use(express.static("Images"));
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect("mongodb://localhost:27017/Revolt_Images",{})
+mongoose.connect("mongodb://localhost:27017/Revolt_Images",{useNewUrlParser:true})
     .then(()=> console.log("MongoDB Connected"))
     .catch(err=> console.log("This is error : " + err));
 
@@ -21,7 +21,7 @@ var RevoltImagesSchema = new mongoose.Schema({
 
 });
 
-var Images = mongoose.model("RevoltImages",RevoltImagesSchema); 
+var Images = mongoose.model("revoltimages",RevoltImagesSchema); 
 
 
 //  Images.create({
@@ -48,14 +48,17 @@ app.get("/",function(req,res){
 
 app.get("/FelledRoots",function(req,res){
 
-    const db = MongoClient()
-    const collection = Db.collection('RevoltImages');
    
-    
-   collection.find({}).toArray(function(err,allImages){
+   
+    Images.find({},function(err,allImages){
 
-    res.render("FRMC",{RevoltImages:allImages});
-   })
+        console.log(allImages);
+        res.render("FRMC",{RevoltImages:allImages});
+    });
+   
+
+    
+   
     
    
     
