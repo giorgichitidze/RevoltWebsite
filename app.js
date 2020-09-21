@@ -16,9 +16,6 @@ mongoose.connect("mongodb://localhost:27017/Revolt_Images",{useNewUrlParser:true
     .catch(err=> console.log("This is error : " + err));
 
 
-mongoose.connect("mongodb://localhost:27017/Revolt_Admins",{useNewUrlParser:true})
-    .then(()=> console.log("admins DB created"))
-    .catch(err=>console.log("this is error: " + err));
 
 var RevoltAdminsSchema = new mongoose.Schema({
 
@@ -92,6 +89,7 @@ app.post("/FelledRoots",function(req,res){
 
 app.get("/FelledRoots/:id",function(req,res){
 
+    
     Images.findById(req.params.id,function(err,foundImg){
 
         if(err){
