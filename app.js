@@ -14,6 +14,7 @@ app.use(express.static("public"));
 app.use(express.static("Images"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+//Show Hide LogOut Link
 app.use(function (req, res, next) {
   res.locals.currentUser = req.user;
   next();
@@ -113,7 +114,7 @@ app.get("/logout", function (req, res) {
   res.redirect("/");
 });
 
-app.get("/admin/panel", function (req, res) {
+app.get("/admin/panel", isLoggedIn, function (req, res) {
   console.log(req.currentUser);
   res.render("panel");
 });
