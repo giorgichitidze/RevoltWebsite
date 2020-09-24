@@ -1,74 +1,84 @@
-body{
-    background-color: #212121;
-    font-family: 'Open Sans', sans-serif;
-    color: #e8e8e8;
+body {
+  background-color: #212121;
+  font-family: "Open Sans", sans-serif;
+  color: #e8e8e8;
 }
 #MainNavbar {
-    font-size: 1.5rem;
-    background: #212121;
+  font-size: 1.5rem;
+  background: #212121;
 }
 
-#MainNavbar .nav-link{
-    color: #e8e8e8;
+#MainNavbar .nav-link {
+  color: #e8e8e8;
 }
-#MainNavbar .nav-link:hover{
-    color: #a03535;
+#MainNavbar .nav-link:hover {
+  color: #a03535;
 }
-#MainNavbar .navbar-brand{
-    color: #a03535;
-    font-size: 2rem;
-    
+#MainNavbar .navbar-brand {
+  color: #a03535;
+  font-size: 2rem;
 }
-.h1{
-    color: #e8e8e8;
+.h1 {
+  color: #e8e8e8;
 }
-.navbar.scrolled{
-   
-    transition: background 500ms;
+.navbar.scrolled {
+  transition: background 500ms;
 }
 
-html { scroll-behavior: smooth; } 
+html {
+  scroll-behavior: smooth;
+}
 
-#headingImage{
-    width: 15%;
-    display: flex;
-    margin: auto;
-    margin-bottom: 5px;
+#headingImage {
+  width: 15%;
+  display: flex;
+  margin: auto;
+  margin-bottom: 5px;
 }
-@media(max-width:1200px){
-    #headingGroup .h1{
-        font-size: 3rem;
-    }
-}
-.Icon{
+@media (max-width: 1200px) {
+  #headingGroup .h1 {
     font-size: 3rem;
+  }
 }
-#jumbo{
-    background-color: #212121;
+.Icon {
+  font-size: 3rem;
 }
-#JumboH1{
-    background-color: #a03535;
+#jumbo {
+  background-color: #212121;
 }
-#jumboBTN{
-    background-color: #212121;
-    border: 2px solid #a03535;
-    color: #e8e8e8;
+#JumboH1 {
+  background-color: #a03535;
 }
-#jumboBTN:hover{
-    background-color: #a03535;
+#jumboBTN {
+  background-color: #212121;
+  border: 2px solid #a03535;
+  color: #e8e8e8;
 }
-#header{
-    background:url("Images/FRMC.jpg") center center / cover no-repeat;
+#jumboBTN:hover {
+  background-color: #a03535;
+}
+#header {
+  background: url("Images/FRMC.jpg") center center / cover no-repeat;
 }
 
-#videoCont{
-    width: 75%;
+#videoCont {
+  width: 75%;
 }
-.list-unstyled>li>a{
-    color: #a03535;
+.list-unstyled > li > a {
+  color: #a03535;
 }
-#Footer{
+#Footer {
+  background-color: rgb(15, 15, 15);
+}
 
-    background-color: rgb(15, 15, 15);
+#LogOutBTN {
+  background-color: #212121;
+  border: 2px solid #a03535;
+  color: #e8e8e8;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  float: right;
 }
- 
+#LogOutBTN:hover {
+  background-color: #a03535;
+}

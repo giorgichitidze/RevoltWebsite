@@ -2,6 +2,10 @@
 <br />
 <br />
 
+<a href="/logout" id="LogOutBTN" class="btn bt-lg btn-success jumboBTN"
+  >Log Out</a
+>
+
 <form action="/FelledRoots" method="POST" class="my-5">
   <label for="ImageName">Name</label>
   <input type="text" name="Images[name]" id="ImageName" />
@@ -9,4 +13,5 @@
   <input type="text" name="Images[Image]" id="ImageSrc" />
   <input type="submit" value="Submit" />
 </form>
+
 <%- include("partials/footer.ejs") %>
