@@ -1,9 +1,12 @@
 <%- include("partials/head.ejs") %>
-<form action="/FelledRoots" method="POST">
-    <label for="ImageName">Name</label>
-    <input type="text" name="Images[name]" id="ImageName"> 
-    <label for="ImageSrc">src</label>   
-    <input type="file" name="Images[Image]" id = "ImageSrc" accept="image/*">
-    <input type="submit" value="Submit">
-</form> 
+<br />
+<br />
+
+<form action="/FelledRoots" method="POST" class="my-5">
+  <label for="ImageName">Name</label>
+  <input type="text" name="Images[name]" id="ImageName" />
+  <label for="ImageSrc">src</label>
+  <input type="text" name="Images[Image]" id="ImageSrc" />
+  <input type="submit" value="Submit" />
+</form>
 <%- include("partials/footer.ejs") %>
